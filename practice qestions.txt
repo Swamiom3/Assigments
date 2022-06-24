@@ -1,0 +1,319 @@
+swami omkar 
+batch 2022
+
+practice programs date 21_06_2022
+
+
+
+The marks obtained by a student in 5 different
+subjects are input through the keyboard. The student gets a
+division as per the following rules:
+Percentage above or equal to 60 - First division
+Percentage between 50 and 59 - Second division
+Percentage between 40 and 49 - Third division
+Percentage less than 40 - Fail
+Write a program to calculate the division obtained by the student.
+
+
+
+import java.util.*;
+class five_stud
+    {
+       public static void main(String args[])
+      {
+        double m1,m2,m3,m4,m5,total;
+         double marks;
+          Scanner sc=new Scanner(System.in);
+          System.out.println("enter the marks of subject");
+           m1=sc.nextDouble();
+            m2=sc.nextDouble();
+            m3=sc.nextDouble();
+             m4=sc.nextDouble();
+             m5=sc.nextDouble();
+             total=m1+m2+m3+m4+m5;
+              marks=100*(total/500);
+               System.out.println("Total:" + total);
+  
+             if (marks >= 60)
+               {
+                System.out.println("First Division");
+                 }
+ 
+               else if (marks <= 50 && marks >= 59)
+                {
+             System.out.println("Second Division");
+               }
+
+           else if (marks <= 40 && marks >= 49)
+           {
+           System.out.println("Third Division");
+          }
+
+         else if (marks > 40)
+          {     
+        System.out.println("Fail");
+       }
+     }
+  }
+
+
+
+
+
+
+A company insures its drivers in the following
+cases:
+− If the driver is married.
+− If the driver is unmarried, male & above 30 years of age.
+− If the driver is unmarried, female & above 25 years of age.
+In all other cases the driver is not insured. If the marital status, sex
+and age of the driver are the inputs, write a program to determine
+whether the driver is to be insured or not. 
+
+
+import java.util.*;
+class practice2
+ {
+           public static void main(String args[])
+ {
+         Scanner sc=new Scanner(System.in);
+         System.out.println("enter the gender=");
+         char sex=sc.next().charAt(0);
+         System.out.println("enter the marrital satus=");
+         char ms=sc.next().charAt(0);
+          System.out.println("enter the age");
+         int age=sc.nextInt();
+     
+         if(ms=='m')
+      {
+           System.out.println(" the driver are insurensed");
+      }
+      
+        else if ( (sex=='M') &&  (age>30)  && (ms=='u') )
+     {
+          System.out.println("Driver is insurensed");
+      }
+
+       else if ( (sex=='F') && (age>25) && (ms=='u'))
+      {
+           System.out.println(" driver is insurenced");
+       }
+         else
+      {
+
+        System.out.println(" driver is not insurenced");
+      }
+  }
+} 
+
+
+
+
+
+
+Write a program to calculate the salary as per the
+following table:
+Gender Years of Service Qualifications Salary
+Male >= 10 Post-Graduate 15000
+>= 10 Graduate 10000
+< 10 Post-Graduate 10000
+< 10 Graduate 7000
+
+Female >= 10 Post-Graduate 12000
+>= 10 Graduate 9000
+< 10 Post-Graduate 10000
+< 10 Graduate 60
+
+==========================================================================================
+
+
+
+
+import java.util.*;
+class practice3
+   {
+          public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the gender");
+        char gen=sc.next().charAt(0);
+        System.out.println("enter the year");
+        int year=sc.nextInt();
+        System.out.println("enter the qualification");
+        String qua=sc.next();
+     
+
+           if((gen=='M') && (year>=10) && (qua=="post_gra"))
+        {
+            System.out.println("The male salary is 15000");
+         }
+     
+          else if((gen=='M') && (year>=10) && (qua=="gra"))
+         {
+
+            System.out.println("The male salary is 10000");
+          } 
+
+           else if((gen=='M') && (year<10) && (qua=="post_gra"))
+         {
+
+            System.out.println("The male salary is 10000");
+          }
+        
+           else if((gen=='M') && (year<10) && (qua=="gra"))
+         {
+
+            System.out.println("The male salary is 7000");
+          }
+     
+          
+           if((gen=='F') && (year>=10) && (qua=="post_gra"))
+        {
+            System.out.println("The male salary is 13000");
+         }
+     
+          else if((gen=='F') && (year>=10) && (qua=="gra"))
+         {
+
+            System.out.println("The male salary is 9000");
+          } 
+
+           else if((gen=='F') && (year<10) && (qua=="post_gra"))
+         {
+
+            System.out.println("The male salary is 10000");
+          }
+        
+           else if((gen=='F') && (year<10) && (qua=="gra"))
+         {
+
+            System.out.println("The male salary is 6000");
+          }
+
+}
+
+}
+ 
+
+
+
+
+. If cost price and selling price of an item is input through the
+keyboard, write a program to determine whether the seller has
+made profit or incurred loss. Also determine how much profit
+he made or loss he incurred
+
+
+
+import java.util.*;
+class practice4
+{
+public static void main(String args[])
+{
+float p,l;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the cost price");
+float cp=sc.nextFloat();
+System.out.println("enter the selling price");
+float sp=sc.nextFloat();
+p=sp-cp;
+l=cp-sp;
+
+if (sp>cp)
+   {
+    System.out.println(" we earn the profit by selling item" + p);
+    }
+else if (sp<cp)
+   {
+     System.out.println(" we earn the loss of selling item" + l);
+    }
+
+else
+{
+System.out.println("we dont get any lost");
+}
+
+}
+}
+
+
+3 drive
+5:Any year is input through the keyboard. Write a program to
+determine whether the year is a leap year or not
+import java.util.Scanner;
+public class Leapyear
+ {
+   public static void main(String[] args)
+{
+      int year;
+      System.out.println("Enter an Year :: ");
+      Scanner sc = new Scanner(System.in);
+      year = sc.nextInt();
+
+      if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))
+         System.out.println("Specified year is a leap year");
+      else
+         System.out.println("Specified year is not a leap year");
+   }
+}
+
+
+Write a program to check whether a triangle is valid or not,
+when the three angles of the triangle are entered through the
+keyboard. A triangle is valid if the sum of all the three angles
+is equal to 180 degrees
+
+
+
+
+import java.util.*;
+class practice6
+{
+  public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the first angle value = ");
+    int ang1=sc.nextInt();
+   System.out.println("enter the first angle value = ");
+    int ang2=sc.nextInt();
+    System.out.println("enter the first angle value = ");
+    int ang3=sc.nextInt();
+     int sum=ang1+ang2+ang3;
+  if(sum==180)
+{
+System.out.println("This is valid triangle");
+}
+ else
+{
+System.out.println("This is an invalid triangle");
+}
+}
+}
+
+
+
+
+Asked in 5 Drive
+A university has the following rules for a student to qualify
+for a degree with A as the main subject and B as the
+subsidiary subject:
+(a) He should get 55 percent or more in A and 45 percent or
+more in B.
+(b) If he gets than 55 percent in A he should get 55 percent or
+more in B. However, he should get at least 45 percent in
+A.
+(c) If he gets less than 45 percent in B and 65 percent or more
+in A he is allowed to reappear in an examination in B to
+qualify.
+(d) In all other cases he is declared to have failed.
+Write a program to receive marks in A and B and Output
+whether the student has passed, failed or is allowed to
+reappear in B. 
+
+
+
+
+
+
+
+
